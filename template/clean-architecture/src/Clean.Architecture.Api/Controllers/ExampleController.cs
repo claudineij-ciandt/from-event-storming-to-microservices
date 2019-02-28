@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using Clean.Architecture.Core.Model;
 using Clean.Architecture.Core.Services;
 using Microsoft.AspNetCore.Mvc;
 
@@ -16,7 +17,7 @@ namespace Clean.Architecture.Api.Controllers
         }
 
         [HttpGet]
-        public ActionResult<IEnumerable<string>> Get()
+        public ActionResult<IEnumerable<Example>> Get()
         {
             return Ok(service.Get());
         }

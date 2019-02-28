@@ -1,11 +1,12 @@
 using System.Collections.Generic;
+using Clean.Architecture.Core.Model;
 using Clean.Architecture.Core.Repository;
 
 namespace Clean.Architecture.Core.Services
 {
     public interface IExampleService
     {
-        IEnumerable<string> Get();
+        IEnumerable<Example> Get();
     }
 
     public class ExampleService : IExampleService
@@ -18,7 +19,7 @@ namespace Clean.Architecture.Core.Services
 
         }
 
-        public IEnumerable<string> Get()
+        public IEnumerable<Example> Get()
         {
             return repository.Get();
         }
